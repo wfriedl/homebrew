@@ -6,8 +6,8 @@ class GedaGaf < Formula
   sha1 '87c21b3b77eebc8eec1c16672d4b1ab418ccb80d'
 
   devel do
-    url 'http://geda.seul.org/devel/v1.7/1.7.2/geda-gaf-1.7.2.tar.gz'
-    sha1 '519f759211158a61689646e9963cb8c4bb5bb9a4'
+    url 'http://ftp.geda-project.org/geda-gaf/stable/v1.8/1.8.1/geda-gaf-1.8.1.tar.gz'
+    sha1 '89757c0d8387225b80dcde200890c2042d02259e'
   end
 
   depends_on 'pkg-config' => :build
@@ -24,9 +24,8 @@ class GedaGaf < Formula
       "https://trac.macports.org/export/92743/trunk/dports/science/geda-gaf/files/patch-glib-2.32.diff"
     ]}
 
-    # Typo in 1.6.2; fixed (and removed) in 1.7.x
     if !build.devel?
-      ps[:p1] = DATA
+      ps = []
     end
 
     ps
